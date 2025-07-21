@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Kehle (Promo) - Vivek Narzary</title>
-    <link rel="manifest" href="manifest.json" />
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: black;
-            color: white;
-        }
-        .container {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .card {
-            margin: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            overflow: hidden;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        .card img {
-            width: 100%;
-            display: block;
-        }
-        .card .info {
-            padding: 15px;
-            text-align: center;
-        }
-        .card h2 {
-            margin: 10px 0 5px;
-        }
-        .card a {
-            color: #00adee;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kehle Gallery</title>
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #eee;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-height: 90vh;
+      overflow-y: scroll;
+    }
+    .item {
+      border: 1px solid #444;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #222;
+    }
+    .item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .info {
+      margin-top: 10px;
+    }
+    a {
+      color: #4af;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <img src="Ghost.png" alt="Ghost" />
-            <div class="info">
-                <h2>Kehle (Promo)</h2>
-                <p>Artist: Vivek Narzary</p>
-                <a href="https://youtu.be/EvZuWd8wTts" target="_blank">Listen on YouTube</a>
-            </div>
-        </div>
+  <h1>Kehle Gallery</h1>
+  <div class="gallery">
+    <div class="item">
+      <img src="Ghost.png" alt="Ghost">
+      <div class="info">
+        <strong>Title:</strong> Ghost<br />
+        <strong>Artist:</strong> Vivek Narzary<br />
+        <strong>Link:</strong> <a href="https://youtu.be/EvZuWd8wTts">Listen</a>
+      </div>
     </div>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
-        }
-    </script>
+    <div class="item">
+      <img src="Handgun.png" alt="Handgun">
+      <div class="info">
+        <strong>Title:</strong> Handgun<br />
+        <strong>Artist:</strong> Vivek Narzary<br />
+        <strong>Link:</strong> <a href="https://youtu.be/EvZuWd8wTts">Listen</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="Sniper.png" alt="Sniper">
+      <div class="info">
+        <strong>Title:</strong> Sniper<br />
+        <strong>Artist:</strong> Vivek Narzary<br />
+        <strong>Link:</strong> <a href="https://youtu.be/EvZuWd8wTts">Listen</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="Kalashnikov.png" alt="Kalashnikov">
+      <div class="info">
+        <strong>Title:</strong> Kalashnikov<br />
+        <strong>Artist:</strong> Vivek Narzary<br />
+        <strong>Link:</strong> <a href="https://youtu.be/EvZuWd8wTts">Listen</a>
+      </div>
+    </div>
+    <div class="item">
+      <img src="Knife.png" alt="Knife">
+      <div class="info">
+        <strong>Title:</strong> Knife<br />
+        <strong>Artist:</strong> Vivek Narzary<br />
+        <strong>Link:</strong> <a href="https://youtu.be/EvZuWd8wTts">Listen</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+  </script>
 </body>
 </html>
